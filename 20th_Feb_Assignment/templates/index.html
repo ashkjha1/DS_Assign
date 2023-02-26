@@ -1,0 +1,28 @@
+{% block head %}
+
+<title>HomePage</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">HomePage</h1>
+    <h3 style="text-align: left">Enter your Details</h3>
+
+    <div class="form">
+        <form action="/welcome" method="POST">
+
+            <label for="student_name">Name</label> <br/>
+            <input type="text" name="student_name" id="student_name"> <br/>
+
+            <label for="course_name">Course name</label> <br/>
+            <input type="text" name="course_name" id="course_name"> <br/>
+
+            <label for="location">Current location</label> <br/>
+            <input type="text" name="location" id="location"> <br/>
+
+            <input type="submit" value="Submit Details">
+        </form>
+    </div>
+</div>
+{% endblock %}
